@@ -2,11 +2,11 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 
-app.use("/css", express.static("css");
-app.use("/js", express.static("js");
-app.use("/resources", express.static("resources");
+app.use("/css", express.static("css"));
+app.use("/js", express.static("js"));
+app.use("/resources", express.static("resources"));
 
-app.get("/", function(res, req) {
+app.get("/", function(req, res) {
 	let doc = fs.readFileSync("index.html", "utf-8");
 	res.send(doc.serialize);
 });
