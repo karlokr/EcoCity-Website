@@ -3,6 +3,15 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
+#unityWrapper {
+  display: flex;
+  width: 100%;
+}
+#unityContainer {
+  width: 100%;
+  display: flex;
+  align-self: center;
+}
 
 #mainNav {
   min-height: 56px;
