@@ -44,7 +44,7 @@
             <a class="nav-link js-scroll-trigger" href="#projects">EcoInfo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#unityContainer">Play The Sensation</a>
+            <a class="nav-link js-scroll-trigger" id="play" onclick="barHide()" style="cursor: pointer">Play The Sensation</a>
           </li>
         </ul>
       </div>
@@ -159,7 +159,25 @@ we must learn that to survive, we must adapt.</p>
 
   <!-- Custom scripts for this template -->
   <script src="js/grayscale.min.js"></script>
+  <script>
+      function barHide() {
+        let navBar = document.getElementById("mainNav");
+        navBar.style.display = 'none';
+      }
+      var position = $(window).scrollTop();
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll < position) {
+          $("#mainNav").css("display", "unset");
+        }
+        position = scroll;
+      });
 
+
+  $("#play").click(function() {
+      let unityPane = $("#unityContainer");
+     $('html,body').animate({scrollTop: unityPane.offset().top},'slow');
+  });
+  </script>
 </body>
-
 </html>
