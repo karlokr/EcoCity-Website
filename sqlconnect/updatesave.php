@@ -13,10 +13,11 @@
 	//$savedata = mysqli_real_escape_string($con, $_POST["savedata"]);
 	$ecoscore = 1000;
 	$savedata = "ienientfpt";
-
-	$insertsavequery = "INSERT INTO savegames (id, ecoscore, savedata) VALUES ('" . $id . "', '" . $ecoscore . "', '" . $savedata . "');";
-
-	mysqli_query($con, $insertsavequery) or die("7: Add save game failed"); //error code #4 = insert query failed
+	$save_num = mysqli_real_escape_string($con, $_POST["save_num"]);
+	
+	$updatequery = "UPDATE savegames SET ecoscore = " . $ecoscore . ", savedata = '" . $savedata . "' WHERE savenum = " . $save_num . ";";
+	
+	mysqli_query($con, $insertuserquery) or die("8: Update save game unsuccessful.");
 		
 	echo("0");
 ?>
