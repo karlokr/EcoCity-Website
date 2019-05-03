@@ -1,5 +1,5 @@
 <?php
-	$con = mysqli_connect('localhost', 'root', '', 'ecocity');
+	$con = mysqli_connect('localhost', '', '', 'ecocity');
 
 	//check that connection happened
 	if (mysqli_connect_errno()){
@@ -11,7 +11,7 @@
 	$password = mysqli_real_escape_string($con, $_POST["password"]);
 
 	//check if name exists
-	$namecheckquery = "SELECT username, salt, hash, score FROM users WHERE username='" . $username . "';";
+	$namecheckquery = "SELECT username, salt, hash, id FROM users WHERE username='" . $username . "';";
 	
 	$namecheck = mysqli_query($con, $namecheckquery) or die("2: Name check query failed"); //error code #2 = name check query failed
 
@@ -32,7 +32,7 @@
 		exit();
 	}
 	
-	echo "0\t" . $existinginfo["score"];
+	echo "0\t" . $existinginfo["id"];
 
 
 ?>
