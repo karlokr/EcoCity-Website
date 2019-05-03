@@ -1,5 +1,5 @@
 <?php
-	$con = mysqli_connect('localhost', '', '', 'ecocity');
+	$con = mysqli_connect('localhost', 'pillarmen', '', 'ecocity');
 
 	//check that connection happened
 	if (mysqli_connect_errno()){
@@ -9,10 +9,8 @@
 	
 	$username = mysqli_real_escape_string($con, $_POST["name"]);
 	$id = mysqli_real_escape_string($con, $_POST["id"]);
-	//$ecoscore = mysqli_real_escape_string($con, $_POST["ecoscore"]);
-	//$savedata = mysqli_real_escape_string($con, $_POST["savedata"]);
-	$ecoscore = 10;
-	$savedata = "ienintfpt";
+	$ecoscore = mysqli_real_escape_string($con, $_POST["ecoscore"]);
+	$savedata = mysqli_real_escape_string($con, $_POST["savedata"]);
 	$save_num = mysqli_real_escape_string($con, $_POST["save_num"]);
 	
 	$updatequery = "UPDATE savegames SET ecoscore=" . $ecoscore . ", savedata='" . $savedata . "' WHERE save_num=" . $save_num . ";";
