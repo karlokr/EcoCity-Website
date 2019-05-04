@@ -7,9 +7,9 @@
 		exit();
 	}
 	
-	$updatequery = "UPDATE savegames SET ecoscore=" . $ecoscore . ", savedata='" . $savedata . "' WHERE save_num=" . $save_num . ";";
+	$updatequery = "SELECT * FROM (SELECT username, ecoscore FROM savegames ORDER BY ecoscore DESC) WHERE ROWNUM < 10;";
 	
-	mysqli_query($con, $updatequery) or die("8: Update save game unsuccessful." . $save_num . $id . $username);
+	$leaderboard = mysqli_query($con, $updatequery) or die("9: Leaderboard query failed");
 		
-	echo("0");
+	echo("0" . $leaderboard);
 ?>

@@ -9,10 +9,8 @@
 	
 	$username = mysqli_real_escape_string($con, $_POST["name"]);
 	$id = mysqli_real_escape_string($con, $_POST["id"]);
-	//$ecoscore = mysqli_real_escape_string($con, $_POST["ecoscore"]);
-	//$savedata = mysqli_real_escape_string($con, $_POST["savedata"]);
-	$ecoscore = 1000;
-	$savedata = "ienientfpt";
+	$ecoscore = mysqli_real_escape_string($con, $_POST["ecoscore"]);
+	$savedata = mysqli_real_escape_string($con, $_POST["savedata"]);
 
 	$insertsavequery = "INSERT INTO savegames (id, ecoscore, savedata) VALUES ('" . $id . "', '" . $ecoscore . "', '" . $savedata . "');";
 
