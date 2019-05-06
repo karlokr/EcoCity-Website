@@ -17,7 +17,7 @@
 	
 	$rows = array();
 	while ($r = mysqli_fetch_assoc($leaderboard)) {
-		$rows[] = $r;
+		$rows["leaderboard"][] = $r;
 	}
 	
 	echo("0" . "\t" . json_encode($rows));
