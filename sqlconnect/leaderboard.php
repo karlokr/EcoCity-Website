@@ -7,11 +7,11 @@
 		exit();
 	}
     
-    $pageno = mysqli_real_escape_string($con, $_POST["pageno"]);
+    	$pageno = mysqli_real_escape_string($con, $_POST["pageno"]);
 	$gamemode = mysqli_real_escape_string($con, $_POST["game_mode"]);
 	$level = mysqli_real_escape_string($con, $_POST["level"]);
 	
-	$leaderboardquery = "SELECT username, ecoscore FROM savegames ORDER BY ecoscore DESC WHERE game_mode = '" . $game_mode . "', level = '" . $level . "';";
+	$leaderboardquery = "SELECT username, ecoscore FROM savegames WHERE game_mode='" . $gamemode . "' AND level='" . $level . "' ORDER BY ecoscore DESC LIMIT " . $pageno . "," . ($pageno + 5) . ";";
 	
 	$leaderboard = mysqli_query($con, $leaderboardquery) or die("9: Leaderboard query failed");
 	
@@ -20,5 +20,5 @@
 		$rows[] = $r;
 	}
 	
-	echo("0" . "\t" . $leaderboard);
+	echo("0" . "\t" . json_encode($rows));
 ?>
