@@ -11,7 +11,15 @@
 	$gamemode = mysqli_real_escape_string($con, $_POST["game_mode"]);
 	$level = mysqli_real_escape_string($con, $_POST["level"]);
 	
-	$leaderboardquery = "SELECT username, ecoscore FROM savegames WHERE game_mode='" . $gamemode . "' AND level='" . $level . "' ORDER BY ecoscore DESC LIMIT " . $pageno . "," . ($pageno + 5) . ";";
+	if ($pageno == 0){
+		$startindex = 0;
+		$endindex = 5;
+	} else {
+		$startindex = $pageno * 5;
+		$endindex = $startindex + 5;
+	}
+
+	$leaderboardquery = "SELECT username, ecoscore FROM savegames WHERE game_mode='" . $gamemode . "' AND level='" . $level . "' ORDER BY cast(savegames.ecoscore as int) DESC LIMIT " . $startindex . "," . $endindex . ";";
 	
 	$leaderboard = mysqli_query($con, $leaderboardquery) or die("9: Leaderboard query failed");
 	
