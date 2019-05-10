@@ -27,6 +27,12 @@
 	while ($r = mysqli_fetch_assoc($leaderboard)) {
 		$rows["leaderboard"][] = $r;
 	}
-	
-	echo("0" . "\t" . json_encode($rows));
+
+	$recordsquery = "SELECT COUNT(*) FROM savegames WHERE game_mode='" . $gamemode . "' AND level='" . $level . "';";
+
+        $records = mysqli_query($con, $recordsquery) or die("9: Leaderboard query failed");
+
+	$count = mysqli_fetch_array($records);
+
+	echo("0" . "\t" . json_encode($rows) . "\t" . $count[0]);
 ?>
