@@ -8,14 +8,14 @@
  }
 #mainNav {
   min-height: 56px;
-  background-color: #fff;
+  background-color: #131c1c;
 }
 
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: #ffb906;
+  border: 1px solid #ffb906;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -28,8 +28,14 @@
   padding: .9rem 0;
 }
 
-#mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
+#mainNav .navbar-brand {
+  color: #161616;
+  font-weight: 700;
+  padding: .9rem 0;
+}
+
+#mainNav .navbar-nav .nav-link {
+  color: #fff;
   outline: none;
   background-color: transparent;
 }
@@ -200,7 +206,7 @@
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+    border-left: 0.5rem solid #ffb906;
   }
 }
 
