@@ -201,10 +201,12 @@
 
 .projects-section .featured-text {
   padding: 2rem;
+  width: 100%;
 }
 
 @media (min-width: 992px) {
   .projects-section .featured-text {
+	width: 90%;
     padding: 0 0 0 2rem;
     border-left: 0.5rem solid #ffb906;
   }
@@ -213,13 +215,11 @@
 .projects-section .project-text {
   padding: 3rem;
   font-size: 90%;
-  width: 95%;
 }
 
 @media (min-width: 992px) {
   .projects-section .project-text {
     padding: 2rem;
-	width: 100%;
   }
   .projects-section .project-text hr {
     border-color: #64a19d;
