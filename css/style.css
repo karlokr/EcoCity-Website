@@ -213,11 +213,13 @@
 .projects-section .project-text {
   padding: 3rem;
   font-size: 90%;
+  width: 95%;
 }
 
 @media (min-width: 992px) {
   .projects-section .project-text {
     padding: 2rem;
+	width: 100%;
   }
   .projects-section .project-text hr {
     border-color: #64a19d;
