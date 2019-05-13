@@ -65,26 +65,27 @@
     color: white;
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: #131c1c;
+	border-bottom: grey 1px solid;
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #161616;
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #161616;
+    color: #fff;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: #ffb906;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #ffb906;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: #ffb906;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #ffb906;
   }
 }
 
@@ -178,9 +179,10 @@
 }
 
 .about-section {
-  padding: 3rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+  padding: 1.5rem 0;
+  padding-top: 5rem !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(50, 64, 64, 0.9)), to(rgba(50, 64, 64, 0.8)));
+  background: linear-gradient(to bottom, #161616 0%, rgba(50, 64, 64, 1.0) 100%);
 }
 
 .about-section p {
@@ -220,8 +222,8 @@
 
 .signup-section {
   padding: 10rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 64, 64, 0.1)), color-stop(75%, rgba(50, 64, 64, 0.5)), to(#324040)), url("../img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(50, 64, 64, 0.1) 0%, rgba(50, 64, 64, 0.5) 75%, #324040 100%), url("../img/bg-signup.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -313,4 +315,14 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+
+.bg-black {
+	background-color: #131c1c !important; 
+}
+
+.bg-light {
+	background-color: #324040 !important;
+}
+
+
 
