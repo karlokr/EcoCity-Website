@@ -209,7 +209,7 @@
 
 @media (min-width: 992px) {
   .projects-section .project-text {
-    padding: 5rem;
+    padding: 2rem;
   }
   .projects-section .project-text hr {
     border-color: #64a19d;
@@ -313,3 +313,4 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+
