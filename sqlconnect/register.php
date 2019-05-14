@@ -21,7 +21,8 @@
 	}
 
 	//add user to the table
-	$salt = "\$5\$rounds=5000\$" . "015%*@gfemjy" . $username . "\$";
+	$salt = file_get_contents();
+	//$salt = "\$5\$rounds=5000\$" . "015%*@gfemjy" . $username . "\$";
 	$hash = crypt($password, $salt);
 	
 	$insertuserquery = "INSERT INTO users (username, hash, salt) VALUES ('" . $username . "', '" . $hash . "', '" . $salt . "');";
