@@ -191,6 +191,18 @@
   background: linear-gradient(to bottom, #161616 0%, rgba(50, 64, 64, 1.0) 100%);
 }
 
+.navbar-toggler {
+    font-size: 80%;
+    padding: 0.75rem;
+    color: #ffb906;
+    border: 1px solid #ffb906;
+}
+
+.navbar-toggler:hover {
+    color: #ffe5a3;
+    border: 1px solid #ffe5a3;
+}
+
 .about-section p {
   margin-bottom: 5rem;
 }
@@ -211,6 +223,13 @@
     border-left: 0.5rem solid #ffb906;
   }
 }
+
+.projects-section .featured-text2 {
+  padding: 2rem;
+  width: 100%;
+}
+
+
 
 .projects-section .project-text {
   padding: 3rem;
