@@ -20,10 +20,7 @@
 		exit();
 	}
 
-	$file = "";
-        $salt = fgets(fopen($file, 'r')) . $username . "\$";
-	$salt = preg_replace('/\s+/', ' ', trim($salt));
-	$hash = crypt($password, $salt);
+	$hash = password_hash($password, PASSWORD_DEFAULT);
 	
 	$insertuserquery = "INSERT INTO users (username, hash) VALUES ('" . $username . "', '" . $hash . "');";
 
