@@ -20,12 +20,12 @@
 		exit();
 	}
 
-	//add user to the table
-	$salt = file_get_contents();
-	//$salt = "\$5\$rounds=5000\$" . "015%*@gfemjy" . $username . "\$";
+	$file = "";
+        $salt = fgets(fopen($file, 'r')) . $username . "\$";
+	$salt = preg_replace('/\s+/', ' ', trim($salt));
 	$hash = crypt($password, $salt);
 	
-	$insertuserquery = "INSERT INTO users (username, hash, salt) VALUES ('" . $username . "', '" . $hash . "', '" . $salt . "');";
+	$insertuserquery = "INSERT INTO users (username, hash) VALUES ('" . $username . "', '" . $hash . "');";
 
 	mysqli_query($con, $insertuserquery) or die("4: Insert player query failed"); //error code #4 = insert query failed
 	
