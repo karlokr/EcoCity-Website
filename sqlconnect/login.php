@@ -11,7 +11,7 @@
 	$password = mysqli_real_escape_string($con, $_POST["password"]);
 
 	//check if name exists
-	$namecheckquery = "SELECT username, salt, hash, id FROM users WHERE username='" . $username . "';";
+	$namecheckquery = "SELECT username, hash, id FROM users WHERE username='" . $username . "';";
 	
 	$namecheck = mysqli_query($con, $namecheckquery) or die("2: Name check query failed"); //error code #2 = name check query failed
 
@@ -22,13 +22,15 @@
 	
 	//get login info from query
 	$existinginfo = mysqli_fetch_assoc($namecheck);
-	$salt = $existinginfo["salt"];
+    	$file = "";
+	$salt = fgets(fopen($file, 'r')) . $username . "\$";
+	$salt = preg_replace('/\s+/', ' ', trim($salt));
 	$hash = $existinginfo["hash"];
 	
 	$loginhash = crypt($password, $salt);
 	
 	if ($hash != $loginhash) {
-		echo "6: Incorrect password."; //error code #6 = password does not hash to match table
+		echo "6: Incorrect password." . $salt; //error code #6 = password does not hash to match table
 		exit();
 	}
 	
