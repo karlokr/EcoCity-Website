@@ -8,14 +8,14 @@
  }
 #mainNav {
   min-height: 56px;
-  background-color: #fff;
+  background-color: #131c1c;
 }
 
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: #ffb906;
+  border: 1px solid #ffb906;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -28,8 +28,14 @@
   padding: .9rem 0;
 }
 
-#mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
+#mainNav .navbar-brand {
+  color: #161616;
+  font-weight: 700;
+  padding: .9rem 0;
+}
+
+#mainNav .navbar-nav .nav-link {
+  color: #fff;
   outline: none;
   background-color: transparent;
 }
@@ -65,26 +71,27 @@
     color: white;
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: #131c1c;
+	border-bottom: grey 1px solid;
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #161616;
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #161616;
+    color: #fff;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: #ffb906;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #ffb906;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: #ffb906;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #ffb906;
   }
 }
 
@@ -178,9 +185,22 @@
 }
 
 .about-section {
-  padding-top: 10rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+  padding: 1.5rem 0;
+  padding-top: 5rem !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(50, 64, 64, 0.9)), to(rgba(50, 64, 64, 0.8)));
+  background: linear-gradient(to bottom, #161616 0%, rgba(50, 64, 64, 1.0) 100%);
+}
+
+.navbar-toggler {
+    font-size: 80%;
+    padding: 0.75rem;
+    color: #ffb906;
+    border: 1px solid #ffb906;
+}
+
+.navbar-toggler:hover {
+    color: #ffe5a3;
+    border: 1px solid #ffe5a3;
 }
 
 .about-section p {
@@ -188,19 +208,28 @@
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 
 .projects-section .featured-text {
   padding: 2rem;
+  width: 100%;
 }
 
 @media (min-width: 992px) {
   .projects-section .featured-text {
+	width: 90%;
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+    border-left: 0.5rem solid #ffb906;
   }
 }
+
+.projects-section .featured-text2 {
+  padding: 2rem;
+  width: 100%;
+}
+
+
 
 .projects-section .project-text {
   padding: 3rem;
@@ -209,7 +238,7 @@
 
 @media (min-width: 992px) {
   .projects-section .project-text {
-    padding: 5rem;
+    padding: 2rem;
   }
   .projects-section .project-text hr {
     border-color: #64a19d;
@@ -220,8 +249,8 @@
 
 .signup-section {
   padding: 10rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 64, 64, 0.1)), color-stop(75%, rgba(50, 64, 64, 0.5)), to(#324040)), url("../img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(50, 64, 64, 0.1) 0%, rgba(50, 64, 64, 0.5) 75%, #324040 100%), url("../img/bg-signup.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -313,3 +342,14 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+
+.bg-black {
+	background-color: #131c1c !important; 
+}
+
+.bg-light {
+	background-color: #324040 !important;
+}
+
+
+

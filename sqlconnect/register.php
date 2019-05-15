@@ -20,13 +20,20 @@
 		exit();
 	}
 
-	//add user to the table
-	$salt = "\$5\$rounds=5000\$" . "015%*@gfemjy" . $username . "\$";
-	$hash = crypt($password, $salt);
+	$hash = password_hash($password, PASSWORD_DEFAULT);
 	
-	$insertuserquery = "INSERT INTO users (username, hash, salt) VALUES ('" . $username . "', '" . $hash . "', '" . $salt . "');";
+	$insertuserquery = "INSERT INTO users (username, hash) VALUES ('" . $username . "', '" . $hash . "');";
 
 	mysqli_query($con, $insertuserquery) or die("4: Insert player query failed"); //error code #4 = insert query failed
-		
-	echo("0");
+	
+	//get id of new user from db
+	$idquery = "SELECT id FROM users WHERE username='" . $username . "';";
+	
+	$idresult = mysqli_query($con, $idquery) or die("10: User ID lookup failed"); //error code #10 = user id lookup failed
+	
+	//get login info from query
+	$iddb = mysqli_fetch_assoc($idresult);
+	$id = $iddb["id"];
+	
+	echo("0" . "\t" . $id);
 ?>

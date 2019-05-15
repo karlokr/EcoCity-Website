@@ -5,8 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src="Build/UnityLoader.js"></script>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
   <script>
-    UnityLoader.instantiate("unityContainer", "Build/ecocity-build.json");
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
   </script>
   <title>EcoCity: The Game</title>
 
@@ -34,13 +38,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="#about">Download</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">EcoInfo</a>
+            <a class="nav-link js-scroll-trigger" href="#projects">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" id="play" onclick="barHide()">Play The Sensation</a>
+            <a class="nav-link js-scroll-trigger" id="play" onclick="barHide()">Play now!</a>
           </li>
         </ul>
       </div>
@@ -59,44 +63,56 @@
 
   <!-- About Section -->
   <section id="about" class="about-section text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">EcoCity: The Game</h2>
-          <p class="text-white-50">EcoCity is not just a game.
-            It is the human experience. The Earth is burning. The polar bears are drowning.
-            Vancouver will soon be underwater. To survive, humanity must adapt. Introducing “EcoCity”, a game
-            where a user must carefully craft and manage a city to be both economically and ecologically viable.
-            Utilizing cutting-edge graphics and revolutionary gameplay elements, a player can design a city limited
-            only by their imagination. EcoCity is no mere city-building simulator, however.  Users create their cities
-            with the goal of becoming emission-free by the year 2040, and must manage the pollution output of their city,
-            finding sustainable ways to house people and manage industry.</p>
-            <h3 class="text-white mb-4">Who can build the best EcoCity?</h3>
-            <h1 class="text-white mb-4">Is it you?</h1>
-        </div>
-      </div>
+		<div class="col-lg-8 mx-auto">
+            <h3 class="text-white mb-4">Can <b style="color:#ffb906">YOU</b> build the best EcoCity?</h3>
+            <h1 class="text-white mb-4"><b style="color:#ffb906">PLAY FOR FREE!</b></h1>
+			<a href="apk/ecocity.apk"><img src="img/play.png" style="width:280px;padding-bottom:1rem"></a>
+		</div>
      <!--<img src="img/nightsky.jpg" class="img-fluid" alt="">-->
-    </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects-section bg-light" style="background-color: #a7aa9b !important">
+  <section id="projects" class="projects-section bg-light">
     <div class="container">
 
-      <div class="row align-items-center no-gutters mb-4 mb-lg-5" style="background-color:grey;">
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5 bg-black">
         <div class="col-xl-8 col-lg-7">
           <img class="img-fluid mb-3 mb-lg-0" src="img/beach.jpg" alt="">
         </div>
         <div class="col-xl-4 col-lg-5">
-          <div class="featured-text text-center text-lg-left">
-            <h4>EcoCity</h4>
-            <p class="text-black-50 mb-0">When my mother was young, she would tell me of the mild summers and
-              joyful afternoons that her and her friends would spend frolicking at the beach. But now the harsh
-              rays of the sun and high, rough seas drive all pleasure-seekers to cover. What can we do?</p>
+          <div class="featured-text text-center text-lg-left text-white">
+            <h4>Build your <b style="color:#ffb906">OWN</b> EcoCity</h4>
+            <p class="text-white-50 mb-0">
+				Become the Mayor and build your own EcoCity, the way you want it. 
+				Build houses, upgrade industry to green standards. 
+				Can you be emission free by 2040?
+			</p><br>
+			<p class="text-white-50 mb-0">
+				Your success or failure depends on your knowledge of the Four Pillars of EcoCity.
+				Can you take your city to the next level?
+			</p>
           </div>
         </div>
       </div>
 
+
+	  <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/bg-masthead.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+				<h4 class="text-white">The Four Pillars Will Save Us</h4>
+                <p class="mb-0 text-white-50">The four pillars of EcoCity are the only thing standing between humanity and oblivion.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  
       <!-- Project One Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
@@ -106,44 +122,41 @@
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">The Four Pillars Will Save Us</h4>
-                <p class="mb-0 text-white-50">The four pillars of EcoCity are the only thing standing between humanity and oblivion.</p>
-                <hr class="d-none d-lg-block mb-0 ml-0">
+			  <h4 class="text-white">Reviews</h4>
+			  <ul class="mb-0 text-white-50" style="padding-left:0;list-style-type: none;">
+					<li><b style="color:#ffb906">5/5</b> "I love strategic city building games like this. This is much better than Cities: Skylines." </li>
+					<li><b style="color:#ffb906">5/5</b> "Best city builder I have ever played!"</li>
+					<li><b style="color:#ffb906">5/5</b> "If you like games like Boom Beach, Clash of Clans or Mario I think you'll like this one!"</li>
+				</ul>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Project Two Row -->
-      <div class="row justify-content-center no-gutters">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="img/bg-masthead.jpg" alt="">
-        </div>
-        <div class="col-lg-6 order-lg-first">
-          <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">Conclusion</h4>
-                <p class="mb-0 text-white-50">In essence, EcoCity teaches a player, be they adult or child, that the key to a
-brighter future is to eventually eliminate the pollutants a metropolis produces. All
-of humanity is currently balanced on the razors edge of ecological oblivion, and
-we must learn that to survive, we must adapt.</p>
-                <hr class="d-none d-lg-block mb-0 mr-0">
-              </div>
-            </div>
-          </div>
-        </div>
+        
+     
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5 bg-light" style="margin-top: 5rem !important; margin-bottom: 0 !important;">
+                <button class="navbar-toggler navbar-toggler-right" id="playbutton" type="button" onclick="barHide()" style="font-size:36pt;margin:0 auto;display:block">
+                    <b>PLAY NOW!</b>
+                </button>
       </div>
+     
 
     </div>
   </section>
+    
+
+    
+
+
   <!-- Unity gameplay window --->
-  <div id="unityContainer" style="width: 100%; height: 90%; margin: auto"></div>
+  <div id="unityContainer" style="width: 100%; height: 100vh; margin: auto; display:none"></div>
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
     <div class="container">
-      Copyright &copy; The Pillar Men Inc.
+      Copyright &copy; 2019 The Pillar Men Inc. All Rights Reserved.<br><br>
+	  The Pillar Men Inc. respectfully acknowledges that the land on which BCIT’s main campuses are located is the traditional and unceded territory of the Coast Salish peoples, specifically the shared traditional territories of the Səl̓ílwətaʔ/Selilwitulh (Tsleil-Waututh), Sḵwx̱wú7mesh Úxwumixw (Squamish), and xʷməθkʷəy̓əm (Musqueam) First Nations.
     </div>
   </footer>
 

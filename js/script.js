@@ -53,12 +53,20 @@ $(window).scroll(function() {
   var scroll = $(window).scrollTop();
   if (scroll < position) {
     $("#mainNav").css("display", "unset");
+    
   }
   position = scroll;
 });
 
 // Properly scrolls a user down to the Unity pane when "play" is clicked
 $("#play").click(function() {
+    $("#unityContainer").css("display", "block");
+let unityPane = $("#unityContainer");
+$('html,body').animate({scrollTop: unityPane.offset().top},'slow');
+});
+
+$("#playbutton").click(function() {
+    $("#unityContainer").css("display", "block");
 let unityPane = $("#unityContainer");
 $('html,body').animate({scrollTop: unityPane.offset().top},'slow');
 });
