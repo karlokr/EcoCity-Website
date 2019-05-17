@@ -3,22 +3,16 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
- #play:hover {
-    cursor: pointer;
- }
 #mainNav {
   min-height: 56px;
-  background-color: #131c1c;
-}
-#team {
-  display: none;
+  background-color: #fff;
 }
 
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #ffb906;
-  border: 1px solid #ffb906;
+  color: #64a19d;
+  border: 1px solid #64a19d;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -31,23 +25,10 @@
   padding: .9rem 0;
 }
 
-#mainNav .navbar-brand {
-  color: #161616;
-  font-weight: 700;
-  padding: .9rem 0;
-}
-
-#mainNav .navbar-nav .nav-link {
-  color: #fff;
+#mainNav .navbar-nav .nav-item:hover {
+  color: fade(white, 80%);
   outline: none;
-  font-weight: bold;
-  text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
   background-color: transparent;
-}
-
-.fixed-top {
-  background: linear-gradient(to bottom, #111111 0%, rgba(22, 22, 22, 0.35) 60%, rgba(22,22,22,0.0) 100%);
-
 }
 
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
@@ -81,27 +62,26 @@
     color: white;
   }
   #mainNav.navbar-shrink {
-    background-color: #131c1c;
-	border-bottom: grey 1px solid;
+    background-color: #fff;
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #161616;
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #fff;
+    color: #161616;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #ffb906;
+    color: #64a19d;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #ffb906;
+    color: #467370;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #ffb906;
+    color: #64a19d;
     outline: none;
-    border-bottom: 0.25rem solid #ffb906;
+    border-bottom: 0.25rem solid #64a19d;
   }
 }
 
@@ -111,8 +91,8 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("../img/image2.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.3) 75%, #161616 100%), url("../img/image2.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("../img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -124,30 +104,14 @@
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  color:white;
-  text-shadow: -1px -1px 20px #404040, 1px -1px 20px #404040, -1px 1px 20px #404040, 1px 1px 20px #404040;
-  /*background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .5));
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;*/
-  z-index: 99;
-}
-.masthead h3 {
-  font-family: 'Varela Round';
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.8rem;
-  color:white;
-  text-shadow: -1px -1px 20px #252525, 1px -1px 20px #232525, -1px 1px 20px #252525, 1px 1px 20px #252525;
-  /*background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .4));
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;*/
-  z-index: 99;
+  -webkit-background-clip: text;
 }
 
 .masthead h2 {
   max-width: 20rem;
   font-size: 1rem;
-  z-index: 99;
 }
 
 @media (min-width: 768px) {
@@ -202,22 +166,9 @@
 }
 
 .about-section {
-  padding: 1.5rem 0;
-  padding-top: 5rem !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(50, 64, 64, 0.9)), to(rgba(50, 64, 64, 0.8)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(50, 64, 64, 1.0) 100%);
-}
-
-.navbar-toggler {
-    font-size: 80%;
-    padding: 0.75rem;
-    color: #ffb906;
-    border: 1px solid #ffb906;
-}
-
-.navbar-toggler:hover {
-    color: #ffe5a3;
-    border: 1px solid #ffe5a3;
+  padding-top: 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
+  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
 }
 
 .about-section p {
@@ -225,28 +176,19 @@
 }
 
 .projects-section {
-  padding: 5rem 0;
+  padding: 10rem 0;
 }
 
 .projects-section .featured-text {
   padding: 2rem;
-  width: 100%;
 }
 
 @media (min-width: 992px) {
   .projects-section .featured-text {
-	width: 90%;
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #ffb906;
+    border-left: 0.5rem solid #64a19d;
   }
 }
-
-.projects-section .featured-text2 {
-  padding: 2rem;
-  width: 100%;
-}
-
-
 
 .projects-section .project-text {
   padding: 3rem;
@@ -255,7 +197,7 @@
 
 @media (min-width: 992px) {
   .projects-section .project-text {
-    padding: 2rem;
+    padding: 5rem;
   }
   .projects-section .project-text hr {
     border-color: #64a19d;
@@ -266,8 +208,8 @@
 
 .signup-section {
   padding: 10rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 64, 64, 0.1)), color-stop(75%, rgba(50, 64, 64, 0.5)), to(#324040)), url("../img/bg-signup.jpg");
-  background: linear-gradient(to bottom, rgba(50, 64, 64, 0.1) 0%, rgba(50, 64, 64, 0.5) 75%, #324040 100%), url("../img/bg-signup.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -359,30 +301,3 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
-
-.bg-black {
-	background-color: #131c1c !important; 
-}
-
-.bg-light {
-	background-color: #324040 !important;
-}
-
-
-
-.team-content {
-    padding: 0px 15px 15px 15px;
-}
-.border-team {
-    border-bottom:1px solid #e2e2e2;
-    margin-bottom:10px;
-}
-.team-img:hover {
-    background:#f5f5f5;
-    
-}
-.paddingTB60 {
-    padding-top:60px;
-    padding-bottom:60px;
-}
-
