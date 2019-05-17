@@ -10,6 +10,9 @@
   min-height: 56px;
   background-color: #131c1c;
 }
+#team {
+  display: none;
+}
 
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -37,7 +40,14 @@
 #mainNav .navbar-nav .nav-link {
   color: #fff;
   outline: none;
+  font-weight: bold;
+  text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
   background-color: transparent;
+}
+
+.fixed-top {
+  background: linear-gradient(to bottom, #111111 0%, rgba(22, 22, 22, 0.35) 60%, rgba(22,22,22,0.0) 100%);
+
 }
 
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
@@ -114,23 +124,30 @@
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .5));
+  color:white;
+  text-shadow: -1px -1px 20px #404040, 1px -1px 20px #404040, -1px 1px 20px #404040, 1px 1px 20px #404040;
+  /*background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .5));
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text;*/
+  z-index: 99;
 }
 .masthead h3 {
   font-family: 'Varela Round';
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .4));
+  color:white;
+  text-shadow: -1px -1px 20px #252525, 1px -1px 20px #232525, -1px 1px 20px #252525, 1px 1px 20px #252525;
+  /*background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .4));
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text;*/
+  z-index: 99;
 }
 
 .masthead h2 {
   max-width: 20rem;
   font-size: 1rem;
+  z-index: 99;
 }
 
 @media (min-width: 768px) {
@@ -352,4 +369,20 @@ footer {
 }
 
 
+
+.team-content {
+    padding: 0px 15px 15px 15px;
+}
+.border-team {
+    border-bottom:1px solid #e2e2e2;
+    margin-bottom:10px;
+}
+.team-img:hover {
+    background:#f5f5f5;
+    
+}
+.paddingTB60 {
+    padding-top:60px;
+    padding-bottom:60px;
+}
 
