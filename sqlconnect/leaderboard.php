@@ -19,7 +19,7 @@
 		$endindex = $startindex + 5;
 	}
 
-	$leaderboardquery = "SELECT username, ecoscore FROM savegames WHERE game_mode='" . $gamemode . "' AND level='" . $level . "' ORDER BY cast(savegames.ecoscore as int) DESC LIMIT " . $startindex . "," . $endindex . ";";
+	$leaderboardquery = "SELECT username, ecoscore FROM savegames WHERE level='" . $level . "' ORDER BY cast(savegames.ecoscore as int) DESC LIMIT " . $startindex . "," . $endindex . ";";
 	
 	$leaderboard = mysqli_query($con, $leaderboardquery) or die("9: Leaderboard query failed");
 	
@@ -28,7 +28,7 @@
 		$rows["leaderboard"][] = $r;
 	}
 
-	$recordsquery = "SELECT COUNT(*) FROM savegames WHERE game_mode='" . $gamemode . "' AND level='" . $level . "';";
+	$recordsquery = "SELECT COUNT(*) FROM savegames WHERE level='" . $level . "';";
 
         $records = mysqli_query($con, $recordsquery) or die("9: Leaderboard query failed");
 
