@@ -1,0 +1,15 @@
+CREATE TABLE users (
+id int NOT NULL AUTO_INCREMENT,
+username VARCHAR(16),
+hash VARCHAR(512),
+PRIMARY KEY (id)
+);
+
+CREATE TABLE savegames (
+save_num int NOT NULL AUTO_INCREMENT,
+id int,
+level VARCHAR(20),
+ecoscore int,
+game_data VARCHAR(200),
+PRIMARY KEY (save_num)
+);
