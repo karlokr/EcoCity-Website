@@ -1,5 +1,5 @@
 <?php
-	$con = mysqli_connect('localhost', 'pillarmen', '', 'ecocity');
+	$con = mysqli_connect('localhost', 'root', '', 'ecocity');
 
 	//check that connection happened
 	if (mysqli_connect_errno()){
