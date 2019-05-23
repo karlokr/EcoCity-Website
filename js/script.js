@@ -47,6 +47,12 @@ function barHide() {
   navBar.style.display = 'none';
 }
 
+
+function goToTeam() {
+  let navBar = document.getElementById("team");
+  navBar.style.display = 'block';
+}
+
 // Restores the top bar when a user scrolls up.
 var position = $(window).scrollTop();
 $(window).scroll(function() {
@@ -68,5 +74,11 @@ $('html,body').animate({scrollTop: unityPane.offset().top},'slow');
 $("#playbutton").click(function() {
     $("#unityContainer").css("display", "block");
 let unityPane = $("#unityContainer");
+$('html,body').animate({scrollTop: unityPane.offset().top},'slow');
+});
+
+$("#ourteam").click(function() {
+    $("#team").css("display", "block");
+let unityPane = $("#team");
 $('html,body').animate({scrollTop: unityPane.offset().top},'slow');
 });
