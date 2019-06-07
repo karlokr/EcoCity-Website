@@ -31,6 +31,4 @@
 	}
 	
 	echo "0\t" . $existinginfo["id"];
-
-
 ?>
