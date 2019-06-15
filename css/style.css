@@ -57,6 +57,9 @@
   outline: none;
   background-color: transparent;
 }
+.unity-hide {
+  display: none;
+}
 
 @media (min-width: 992px) {
   #mainNav {
@@ -71,6 +74,10 @@
   #mainNav .navbar-brand {
     padding: .5rem 0;
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  .unity-hide {
+    display: block;
   }
 
   #mainNav .nav-link {

@@ -9,11 +9,6 @@
   <link rel="stylesheet" href="TemplateData/style.css">
   <script src="TemplateData/UnityProgress.js"></script>
   <script src="Build/UnityLoader.js"></script>
-  <script>
-    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {
-      onProgress: UnityProgress
-    });
-  </script>
   <title>EcoCity: The Game</title>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
@@ -46,7 +41,7 @@
             <a class="nav-link js-scroll-trigger" href="#team" onclick="goToTeam()">Our Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" id="play" onclick="barHide()">Play Now!</a>
+            <a class="nav-link js-scroll-trigger unity-hide" id="play" onclick="barHide()">Play Now!</a>
           </li>
         </ul>
       </div>
@@ -141,7 +136,7 @@
       </div>
 
 
-      <div class="row align-items-center no-gutters mb-4 mb-lg-5 bg-light"
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5 bg-light unity-hide"
         style="margin-top: 5rem !important; margin-bottom: 0 !important;">
         <button class="navbar-toggler navbar-toggler-right" id="playbutton" type="button" onclick="barHide()"
           style="font-size:36pt;margin:0 auto;display:block">
@@ -261,7 +256,7 @@
 
 
   <!-- Unity gameplay window -->
-  <div id="unityContainer" style="width: 100%; height: 100vh; margin: auto; display:none"></div>
+  <div id="unityDiv"></div>
 
 
   <!-- Footer -->
