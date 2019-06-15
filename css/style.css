@@ -413,3 +413,7 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.img-fluid {
+  vertical-align: middle !important;
+}
