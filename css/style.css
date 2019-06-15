@@ -260,7 +260,7 @@
   .projects-section .featured-text {
     width: 90%;
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #ffb906;
+    /*border-left: 0.5rem solid #ffb906;*/
   }
 }
 
