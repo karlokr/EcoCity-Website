@@ -1,11 +1,11 @@
 {
-    "title": "Grayscale",
-    "name": "startbootstrap-grayscale",
+    "title": "EcoCity: The Game",
+    "name": "ecocity-the-game",
     "version": "5.0.6",
     "scripts": {
         "start": "gulp watch"
     },
-    "description": "A grayscale one page HTML theme for Bootstrap.",
+    "description": "A website for the game EcoCity: The Game",
     "keywords": [
         "css",
         "sass",
@@ -14,19 +14,23 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/grayscale",
+    "homepage": "https://ecocitythegame.ca/",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://github.com/karlokr/EcoCity-Website/issues",
+        "email": "contact@ecocitythegame.ca"
     },
-    "license": "MIT",
-    "author": "Start Bootstrap",
+    "license": "",
+    "author": "The Pillar Men Inc.",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Karlo Krakan",
+        "Kristian Postnikoff",
+        "Alex Park",
+        "Erik Golke",
+        "Richard Le"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
+        "url": "https://github.com/karlokr/EcoCity-Website"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.8.1",
@@ -36,7 +40,7 @@
         "jquery.easing": "^1.4.1"
     },
     "devDependencies": {
-        "browser-sync": "2.26.3",
+        "browser-sync": "^2.26.7",
         "del": "4.0.0",
         "gulp": "4.0.0",
         "gulp-autoprefixer": "6.0.0",
