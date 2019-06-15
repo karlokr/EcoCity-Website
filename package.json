@@ -7,12 +7,10 @@
     },
     "description": "A website for the game EcoCity: The Game",
     "keywords": [
-        "css",
-        "sass",
+        "game",
+        "unity",
         "html",
-        "responsive",
-        "theme",
-        "template"
+        "responsive"
     ],
     "homepage": "https://ecocitythegame.ca/",
     "bugs": {
