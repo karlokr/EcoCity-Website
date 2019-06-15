@@ -66,19 +66,35 @@ $(window).scroll(function () {
 
 // Properly scrolls a user down to the Unity pane when "play" is clicked
 $("#play").click(function () {
-  $("#unityContainer").css("display", "block");
+  $("#unityDiv").append('<div id="unityContainer" style="width: 100%; height: 100vh; margin: auto;"></div>');
+  $("body").css("overflow", "hidden");
+  var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {
+    onProgress: UnityProgress
+  });
   let unityPane = $("#unityContainer");
   $('html,body').animate({
     scrollTop: unityPane.offset().top
   }, 'slow');
+  unityPane = document.getElementById('unityContainer');
+  unityPane.addEventListener('scroll', function (e) {
+    e.preventDefault();
+  }, false);
 });
 
 $("#playbutton").click(function () {
-  $("#unityContainer").css("display", "block");
+  $("#unityDiv").append('<div id="unityContainer" style="width: 100%; height: 100vh; margin: auto;"></div>');
+  $("body").css("overflow", "hidden");
+  var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {
+    onProgress: UnityProgress
+  });
   let unityPane = $("#unityContainer");
   $('html,body').animate({
     scrollTop: unityPane.offset().top
   }, 'slow');
+  unityPane = document.getElementById('unityContainer');
+  unityPane.addEventListener('scroll', function (e) {
+    e.preventDefault();
+  }, false);
 });
 
 $("#ourteam").click(function () {
