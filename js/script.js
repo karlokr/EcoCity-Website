@@ -107,10 +107,26 @@ $("#ourteam").click(function () {
 
 $(window).on("scroll", function () {
   $('video').each(function () {
-      if ($(this).is(":in-viewport")) {
-          $(this)[0].play();
-      } else {
-          $(this)[0].pause();
-      }
+    if ($(this).is(":in-viewport")) {
+      console.log("Chrome debug: video in viewport")
+      playVideo($(this)[0]);
+    } else {
+      $(this)[0].pause();
+    }
   });
 });
+
+function playVideo(video) {
+  var playPromise = video.play();
+
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+        // Automatic playback started!
+        // Show playing UI.
+      })
+      .catch(error => {
+        // Auto-play was prevented
+        // Show paused UI.
+      });
+  }
+}
